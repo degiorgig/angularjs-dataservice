@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html ng-app="demo">
+<head>
+    <title>Controller Messaging Demo</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.js"></script>
+    <script src="js/DataService.js"></script>
+    <script src="js/demoControllers.js"></script>
+    <link href="css/demo.css" type="text/css" rel="stylesheet" media="screen, projection" />
+</head>
+<body>
+  <div data-ng-controller="TopController as topCtrl">
+      Top Value: <input data-ng-model="topCtrl.DataService.topValue" /><br/>
+      Middle Value: {{topCtrl.DataService.middleValue}}<br/>
+      Bottom Value: {{topCtrl.DataService.bottomValue}}
+  </div>
+  <div data-ng-controller="MiddleController as middleCtrl">
+      Top Value: {{middleCtrl.DataService.topValue}}<br/>
+      Middle Value: <input data-ng-model="middleCtrl.DataService.middleValue" /><br/>
+      Bottom Value: {{middleCtrl.DataService.bottomValue}}
+  </div>
+  <div data-ng-controller="BottomController as bottomCtrl">
+      Top Value: {{bottomCtrl.DataService.topValue}}<br/>
+      Middle Value: {{bottomCtrl.DataService.middleValue}}<br/>
+      Bottom Value:  <input data-ng-model="bottomCtrl.DataService.bottomValue" /><br/>
+  </div>
+</body>
+</html>
