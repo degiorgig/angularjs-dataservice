@@ -10,7 +10,8 @@ This consists of:
 
 You can just open the index.html file in a browser.
 
-The page consists of 3 divs, each controlled by its own controller, with all controllers sharing data via the service.
+The page consists of 4 divs, each controlled by its own controller, with all controllers sharing data via the service.
+The middle div contains a nested controller. 
 
 This pattern can be useful when you have multiple controllers on a page, some of which need to know when data managed by another controller has been changed.
 
