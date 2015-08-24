@@ -6,6 +6,15 @@ angular.module('DataService', []).factory('DataService', function(){
     service.bottomValue;
     /** If not found it will be created runtime */
 
+    service.currentUser = currentUser();
+
+    function currentUser(){
+        if( typeof current === "undefined"){
+            current = "current_value";
+        }
+        return current;
+    };
+
     return service;
 });
 

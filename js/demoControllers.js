@@ -5,9 +5,15 @@ angular
     .controller('NestedController', NestedController)
     .controller('TopController', TopController);
 
+/** Example of angular.extend() */
 function TopController(DataService) {
-    var vm = this;
-    vm.DataService = DataService;
+
+    var vm = {
+        DataService: DataService,
+        motto: 'Yes we can!'
+    };
+
+    angular.extend(this, vm);
 }
 
 function MiddleController(DataService) {

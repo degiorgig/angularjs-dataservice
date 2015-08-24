@@ -15,7 +15,9 @@
     Top Value: <input data-ng-model="topCtrl.DataService.topValue"/><br/>
     Middle Value: {{topCtrl.DataService.middleValue}}<br/>
     Nested Value: {{topCtrl.DataService.nestedValue}}<br/>
-    Bottom Value: {{topCtrl.DataService.bottomValue}}
+    Bottom Value: {{topCtrl.DataService.bottomValue}}<br/>
+    <div>Other parameters: {{topCtrl.motto}}</div>
+    <div>Current User return: {{topCtrl.DataService.currentUser}}</div>
 </div>
 <div data-ng-controller="MiddleController as middleCtrl">
     <h3>MiddleController</h3>
@@ -38,7 +40,10 @@
     Middle Value: {{bottomCtrl.DataService.middleValue}}<br/>
     Nested Value: {{bottomCtrl.DataService.nestedValue}}<br/>
     Bottom Value: <input data-ng-model="bottomCtrl.DataService.bottomValue"/>
+    <br/>
+    Current User return: {{bottomCtrl.DataService.currentUser}}
 </div>
+
 
 </body>
 </html>

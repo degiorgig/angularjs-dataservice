@@ -1,7 +1,7 @@
 Angular Controller data sharing service
 =======================================
 
-Demo using services to share data between controllers in AngularJS
+Demo using services to share data between controllers in AngularJS, trying to explore the possible sharing solutions. 
 
 This consists of:
  - index.html
