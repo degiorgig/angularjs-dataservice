@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html ng-app="cdsApp">
+<head>
+    <title>Controller Data Service Demo</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.js"></script>
+    <script src="js/DataService.js"></script>
+    <script src="js/demoControllers.js"></script>
+    <script src="js/nestedController.js"></script>
+    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen, projection"/>
+</head>
+<body ng-controller="GlobalController as globCtrl">
+<h3>Controller Data Service Demo</h3>
+
+<div data-ng-controller="TopController as topCtrl">
+    <h3>TopController</h3>
+    Top Value: <input data-ng-model="topCtrl.DataService.topValue"/><br/>
+    Middle Value: {{topCtrl.DataService.middleValue}}<br/>
+    Nested Value: {{topCtrl.DataService.nestedValue}}<br/>
+    Bottom Value: {{topCtrl.DataService.bottomValue}}<br/>
+    <div>Other parameters: {{topCtrl.motto}}</div>
+    <div>Current User return: {{topCtrl.DataService.currentUser}}</div>
+</div>
+<div data-ng-controller="MiddleController as middleCtrl">
+    <h3>MiddleController</h3>
+    Top Value: {{middleCtrl.DataService.topValue}}<br/>
+    Middle Value: <input data-ng-model="middleCtrl.DataService.middleValue"/><br/>
+    Nested Value: {{middleCtrl.DataService.nestedValue}}<br/>
+    Bottom Value: {{middleCtrl.DataService.bottomValue}}
+    <div data-ng-controller="NestedController as nestedCtrl" class="nested">
+        <h3>NestedController</h3>
+        Top Value: {{nestedCtrl.DataService.topValue}}<br/>
+        Middle Value: {{nestedCtrl.DataService.middleValue}}<br/>
+        Nested Value: <input data-ng-model="nestedCtrl.DataService.nestedValue"/><br/>
+        Bottom Value: {{nestedCtrl.DataService.bottomValue}}
+       <br />
+        <button ng-click="nestedCtrl.changeTopValue()">change top value</button>
+    </div>
+</div>
+
+<div data-ng-controller="BottomController as bottomCtrl">
+    <h3>BottomController</h3>
+    Top Value: {{bottomCtrl.DataService.topValue}}<br/>
+    Middle Value: {{bottomCtrl.DataService.middleValue}}<br/>
+    Nested Value: {{bottomCtrl.DataService.nestedValue}}<br/>
+    Bottom Value: <input data-ng-model="bottomCtrl.DataService.bottomValue"/><br/>
+    DataFactory Value: {{bottomCtrl.DataFactory.items[0].name}}<br/>
+    <br/>
+    Current User return: {{bottomCtrl.DataService.currentUser}}
+</div>
+
+<pre>
+    DataFactory:
+    {{globCtrl.DataFactory}}
+    {{globCtrl.DataService}}
+    {{globCtrl.result[0].name}}
+</pre>
+
+</body>
+</html>
