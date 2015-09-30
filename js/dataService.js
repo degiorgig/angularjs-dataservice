@@ -49,5 +49,3 @@ angular.module('DataService', [])
 
         return svc;
     });
-
-
