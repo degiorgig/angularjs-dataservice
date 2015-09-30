@@ -2,7 +2,6 @@
 <html ng-app="cdsApp">
 <head>
     <title>Controller Data Service Demo</title>
-<<<<<<< HEAD
     <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.5/angular.js"></script>
     <script src="js/DataService.js"></script>
     <script src="js/demoControllers.js"></script>
@@ -10,14 +9,7 @@
     <link href="css/style.css" type="text/css" rel="stylesheet" media="screen, projection"/>
 </head>
 <body ng-controller="GlobalController as globCtrl">
-=======
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.3/angular.js"></script>
-    <script src="js/DataService.js"></script>
-    <script src="js/demoControllers.js"></script>
-    <link href="css/style.css" type="text/css" rel="stylesheet" media="screen, projection"/>
-</head>
-<body>
->>>>>>> origin/master
+
 <h3>Controller Data Service Demo</h3>
 
 <div data-ng-controller="TopController as topCtrl">
@@ -26,6 +18,7 @@
     Middle Value: {{topCtrl.DataService.middleValue}}<br/>
     Nested Value: {{topCtrl.DataService.nestedValue}}<br/>
     Bottom Value: {{topCtrl.DataService.bottomValue}}<br/>
+
     <div>Other parameters: {{topCtrl.motto}}</div>
     <div>Current User return: {{topCtrl.DataService.currentUser}}</div>
 </div>
@@ -41,11 +34,8 @@
         Middle Value: {{nestedCtrl.DataService.middleValue}}<br/>
         Nested Value: <input data-ng-model="nestedCtrl.DataService.nestedValue"/><br/>
         Bottom Value: {{nestedCtrl.DataService.bottomValue}}
-<<<<<<< HEAD
-       <br />
+        <br/>
         <button ng-click="nestedCtrl.changeTopValue()">change top value</button>
-=======
->>>>>>> origin/master
     </div>
 </div>
 
@@ -54,25 +44,19 @@
     Top Value: {{bottomCtrl.DataService.topValue}}<br/>
     Middle Value: {{bottomCtrl.DataService.middleValue}}<br/>
     Nested Value: {{bottomCtrl.DataService.nestedValue}}<br/>
-<<<<<<< HEAD
     Bottom Value: <input data-ng-model="bottomCtrl.DataService.bottomValue"/><br/>
     DataFactory Value: {{bottomCtrl.DataFactory.items[0].name}}<br/>
-=======
     Bottom Value: <input data-ng-model="bottomCtrl.DataService.bottomValue"/>
->>>>>>> origin/master
     <br/>
     Current User return: {{bottomCtrl.DataService.currentUser}}
 </div>
 
-<<<<<<< HEAD
 <pre>
     DataFactory:
     {{globCtrl.DataFactory}}
     {{globCtrl.DataService}}
     {{globCtrl.result[0].name}}
 </pre>
-=======
->>>>>>> origin/master
 
 </body>
 </html>
